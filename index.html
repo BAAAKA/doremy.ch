@@ -1,0 +1,48 @@
+ <!DOCTYPE html>
+<html>
+<head>
+   <link rel="stylesheet" href="style.css">
+<title>Doremy</title>
+</head>
+<body oncontextmenu="return false;">
+
+ <img width="100%" height="100%" id="startButton" src="doremy.png" alt="Italian Trulli" onclick="playVid()">
+
+
+<div>
+ <video id="doremy" width="100%" height="100%" loop="loop">
+  <source src="doremy.txt" type="video/mp4">
+  <source src="doremy.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video> 
+
+<script> 
+var vid = document.getElementById("doremy"); 
+
+function playVid() { 
+  vid.play(); 
+  document.getElementById("startButton").style.display = "none";
+
+if (!(document.fullscreen)) {
+if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+   (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if (document.documentElement.requestFullScreen) {  
+      document.documentElement.requestFullScreen();  
+    } else if (document.documentElement.mozRequestFullScreen) {  
+      document.documentElement.mozRequestFullScreen();  
+    } else if (document.documentElement.webkitRequestFullScreen) {  
+      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+    }  
+  } 
+} 
+}
+
+
+document.addEventListener("fullscreenchange", playVid, false);
+
+
+</script> 
+
+</div>
+</body>
+</html> 
