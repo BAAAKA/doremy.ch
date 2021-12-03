@@ -25,24 +25,27 @@
 </head>
 
 <body oncontextmenu="return false;">
+  <div id="snow-container" style="width: 100vw; height: 100vh; position: fixed; top: 0;z-index: -1;"></div>
 
-  <img width="100%" height="100%" id="startButton" src="doremy.png" alt="Italian Trulli" onclick="playVid()">
-
+  <img width="100%" height="100%" id="startButton" src="doremyChristmas.png" alt="Italian Trulli" onclick="playVid()">
 
   <div>
     <video id="doremy" width="100%" height="100%" loop="loop">
       <source src="doremy.txt" type="video/mp4">
       <source src="doremy.ogg" type="video/ogg">
-      <!-- GVideo creator is Blue Mokou -->
+      <!-- Video creator is Blue Mokou -->
       https://www.youtube.com/watch?v=WrIFretltrI
     </video>
 
     <script>
+	  document.getElementById("doremy").style.display = "none";
+
       var vid = document.getElementById("doremy");
 
       function playVid() {
         vid.play();
         document.getElementById("startButton").style.display = "none";
+        document.getElementById("doremy").style.display = "inline";
 
         if (!(document.fullscreen)) {
           if ((document.fullScreenElement && document.fullScreenElement !== null) ||
@@ -65,45 +68,53 @@
 
 
     </script>
+	
 
-    This Website is a tribute to Doremy Sweet from touhou. Doremy is great you know, best girl of touhou without a
-    doubt!
-    If you want to know more about doremy sweet, go to https://en.touhouwiki.net/wiki/Doremy_Sweet for more info about
-    her.
-    I wish you sweet dreams! ;)
+	
+	This Website is a tribute to Doremy Sweet from touhou. Doremy is great you know, best girl without a doubt!
+	If you want to know more about doremy sweet, go to https://en.touhouwiki.net/wiki/Doremy_Sweet for more infos about her. 
+	I wish you sweet dreams! ^^
 
+	<h3>Original Video by Blue Mokou</h3>
+	<p1>https://www.youtube.com/watch?v=WrIFretltrI/</p1>
+	</br>
+	</br>
+	</br>
 
-    <h1>Great Twitter People!</h1>
-    <blockquote class="twitter-tweet" data-dnt="true">
-      <p lang="en" dir="ltr">best website ever</p>&mdash; cloudie @ yokaitober!✨🎃 (@fluffysmolcloud) <a
-        href="https://twitter.com/fluffysmolcloud/status/1321709378144100352?ref_src=twsrc%5Etfw">October 29, 2020</a>
-    </blockquote>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    <blockquote class="twitter-tweet" data-dnt="true">
-      <p lang="en" dir="ltr">Oh yeah, I know this one. Love it</p>&mdash; LeLink (@LeLink03) <a
-        href="https://twitter.com/LeLink03/status/1321929429732524038?ref_src=twsrc%5Etfw">October 29, 2020</a>
-    </blockquote>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    <blockquote class="twitter-tweet" data-dnt="true">
-      <p lang="en" dir="ltr">YES<br>GOOD</p>&mdash; Lady Birb (@BirbLady) <a
-        href="https://twitter.com/BirbLady/status/1321710873317052418?ref_src=twsrc%5Etfw">October 29, 2020</a>
-    </blockquote>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    <blockquote class="twitter-tweet" data-dnt="true">
-      <p lang="en" dir="ltr">Jesus christ, I was not expecting to get jumped like that, what the heck Doremy</p>&mdash;
-      4thWallCeci (@4thCeci) <a
-        href="https://twitter.com/4thCeci/status/1321710157076733952?ref_src=twsrc%5Etfw">October 29, 2020</a>
-    </blockquote>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	<h3>2hu Community</h3>
+	<blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">best website ever</p>&mdash; cloudie @ yokaitober!✨🎃 (@fluffysmolcloud) <a href="https://twitter.com/fluffysmolcloud/status/1321709378144100352?ref_src=twsrc%5Etfw">October 29, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+	<blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Oh yeah, I know this one. Love it</p>&mdash; LeLink (@LeLink03) <a href="https://twitter.com/LeLink03/status/1321929429732524038?ref_src=twsrc%5Etfw">October 29, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
-    <h1>Original Video made by Blue Mokou</h1>
-    <p1>https://www.youtube.com/watch?v=WrIFretltrI/</p1>
-    </br>
-    </br>
-    </br>
-    <p1>Made by: KAWAII BAAAKA</p1>
+	<p1>"if you enter a website and the homepage is made in MS Paint, you're onto something good" - AJ on the Touhou Project Discord (─‿‿─)</p1>
+
+	<p1>Made by: KAWAII BAAAKA</p1></br></br>
+	<p1>Contact me here (baaakaDev@protonmail.ch) if you have any complaints, suggestions or... want to talk? ¯\_(ツ)_/¯ </p1>
 
   </div>
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/@erikwatson/snowfall/dist/snowfall.min.js"></script>
+<script>
+  window.onload = function () {
+    snowfall.start({
+	  bg: "#0d0014",
+	  primary: "#8d90b7",
+	  secondary: "#ffffff",
+	  density: 40,
+	  wave: {
+    frequency: 0.001,
+    amplitude: 0.5
+	  },
+	  gravity: {
+		angle: 57,
+		strength: 0.4
+	  },
+	  wind: {
+    angle: 262,
+    strength: 0.1
+	  }
+	});
+  }
+</script>
 
 </html>
