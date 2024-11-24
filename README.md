@@ -19,7 +19,7 @@ The website requires a **video text file**. To create this, simply **rename a `d
   Contains the styling CSS files.
 
 - **`js/`**  
-  Contains the JavaScript files that power the website's functionality.
+  Contains the JS files.
 
 ## About
 Doremy.ch has been running since **2019**
