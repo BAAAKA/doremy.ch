@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web App</title>
+    <script>
+        function sendRequest() {
+            const requestData = {
+                message: 'Hello from the client!'
+            };
+            
+            // Send a POST request to the Python server
+            fetch('http://127.0.0.1:5000/api', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(requestData),
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Show response from the Python server
+                document.getElementById('response').innerText = 'Server response: ' + data.reply;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to the Simple Web App</h1>
+    <button onclick="sendRequest()">Send Request</button>
+    <p id="response"></p>
+</body>
+</html>
