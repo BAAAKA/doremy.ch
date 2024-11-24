@@ -1,7 +1,26 @@
-# doremy.ch
-https://doremy.ch/
+# Doremy.ch
+[doremy.ch](https://doremy.ch/)
 
-My absolute crap website about the touhou character Doremy Sweet. 
+## Setup Instructions
+The website requires a **video text file**. To create this, simply **rename a `doremy.mp4` file** to `doremy.txt`. *(Don't ask)*
 
-To get it working you need a video textfile (rename a doremy.mp4 file to doremy.txt). (dont ask)
+## Directory Structure
+
+- **`assets/`**  
+  Various images and the video in `.txt` format.
+
+- **`assets/cursor/`**  
+  Contains 10 frames for the custom cursor.
+
+- **`assets/doremy_images/`**  
+  All images and GIFs that appear randomly at the bottom-right of the website.
+
+- **`css/`**  
+  Contains the styling CSS files.
+
+- **`js/`**  
+  Contains the JavaScript files that power the website's functionality.
+
+## About
+Doremy.ch has been running since **2019**
 

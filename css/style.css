@@ -1,0 +1,42 @@
+
+
+  html, body {
+    
+scrollbar-width: none; /* Firefox */
+-ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+
+body {
+    background-color: #0d0014;
+    color: white;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 1.7em; /* Adjust the font size */
+    cursor: none;  /* If you want to hide the cursor */
+    position: relative;
+}
+
+.spacer {
+  height: 600px; /* Adjust the height as needed */
+}
+
+/* Hide the scrollbar for WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+display: none;
+}
+
+.spacer-container {
+  height: 6000px; 
+}
+
+#randomImageContainer {
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+}
+
+#randomImage {
+    max-height: 40vh;
+    min-height: 30vh;   /* Image will never be smaller than 10% of the viewport's height */
+
+    border-radius: 8px;
+}

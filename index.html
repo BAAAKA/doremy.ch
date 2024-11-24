@@ -4,96 +4,74 @@
 <head>
   <!-- 
 	Website made by kawaii baaaka; 
-	if you have any complains, suggestions or want to contact me, feel free to mail me at baaakaDev@protonmail.ch 
+	if you have any complains, suggestions or want to contact me, feel free to mail me at baaakaDev+ds[at]protonmail.ch 
 	:) 
 	-->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/random_image.css">
+
+  <link rel="preload" href="css/cursor.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
+
   <meta name="description" content="This Website is a tribute to Doremy Sweet from touhou" />
   <meta name="robots" content="Doremy Sweet" />
-  <link rel="icon" href="logo.png">
+  <link rel="icon" href="assets/logo.png">
   <title>Doremy Sweet!</title>
 
-  <!-- Generated with open graph generator-->
   <meta property="og:title" content="Doremy Sweet">
   <meta property="og:url" content="https://doremy.ch/">
   <meta property="og:description" content="This website is a tribute to the touhou character Doremy Sweet!">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://doremy.ch/logo.png">
+  <meta property="og:image" content="https://doremy.ch/assets/logo.png">
   <meta name="theme-color" content="#1c1c26" />
+
 
 </head>
 
 <body oncontextmenu="return false;">
   <div id="snow-container" style="width: 100vw; height: 100vh; position: fixed; top: 0;z-index: -1;"></div>
 
-  <img width="100%" height="100%" id="startButton" src="doremyChristmas.png" alt="Italian Trulli" onclick="playVid()">
+  <img width="100%" height="100%" id="click_to_enter_image" src="assets/doremyChristmas.png" alt="Italian Trulli" onclick="playVid()">
 
   <div>
-    <video id="doremy" width="100%" height="100%" loop="loop">
-      <source src="doremy.txt" type="video/mp4">
-      <source src="doremy.ogg" type="video/ogg">
+    <video id="doremy_video" width="100%" height="100%" loop="loop">
+      <source src="assets/doremy.txt" type="video/mp4">
       <!-- Video creator is Blue Mokou -->
       https://www.youtube.com/watch?v=WrIFretltrI
     </video>
 
-    <script>
-	  document.getElementById("doremy").style.display = "none";
-
-      var vid = document.getElementById("doremy");
-
-      function playVid() {
-        vid.play();
-        document.getElementById("startButton").style.display = "none";
-        document.getElementById("doremy").style.display = "inline";
-
-        if (!(document.fullscreen)) {
-          if ((document.fullScreenElement && document.fullScreenElement !== null) ||
-            (!document.mozFullScreen && !document.webkitIsFullScreen)) {
-            if (document.documentElement.requestFullScreen) {
-              document.documentElement.requestFullScreen();
-            } else if (document.documentElement.mozRequestFullScreen) {
-              document.documentElement.mozRequestFullScreen();
-            } else if (document.documentElement.webkitRequestFullScreen) {
-              document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
-            }
-          }
-        }
-      }
-
-      //msgWindow=window.open('index.html','windowName','toolbar=no');
-      javascript: window.history.forward(1);
-
-      document.addEventListener("fullscreenchange", playVid, false);
-
-
-    </script>
-	
+    <script src="js/video_script.js"></script>
 
 	
-	This Website is a tribute to Doremy Sweet from touhou. Doremy is great you know, best girl without a doubt!
-	If you want to know more about doremy sweet, go to https://en.touhouwiki.net/wiki/Doremy_Sweet for more infos about her. 
-	I wish you sweet dreams! ^^
+  <div class="spacer-container"></div>
+    
+	<div class="bottom-text">
+	This Website is a tribute to <a href="https://en.touhouwiki.net/wiki/Doremy_Sweet">Doremy Sweet</a>  from Touhou! </br>
+  I aim to keep this website running for as long as possible, even after Im no longer around </br></br></br>
+  
+  
 
-	<h3>Original Video by Blue Mokou</h3>
-	<p1>https://www.youtube.com/watch?v=WrIFretltrI/</p1>
-	</br>
-	</br>
-	</br>
+  <p1>Video was made by Blue Mokou, <a href="https://www.youtube.com/watch?v=WrIFretltrI/">"🐑🍑" on Youtube</a></p1>  </br>
+	<p1>You can contact me here &lt;KAWAII BAAAKA&gt; baaakaDev+ds[at]protonmail.ch ¯\_(ツ)_/¯ </p1>  </br></br>
 
-	<h3>2hu Community</h3>
-	<blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">best website ever</p>&mdash; cloudie @ yokaitober!✨🎃 (@fluffysmolcloud) <a href="https://twitter.com/fluffysmolcloud/status/1321709378144100352?ref_src=twsrc%5Etfw">October 29, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-	<blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Oh yeah, I know this one. Love it</p>&mdash; LeLink (@LeLink03) <a href="https://twitter.com/LeLink03/status/1321929429732524038?ref_src=twsrc%5Etfw">October 29, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
-	<p1>"if you enter a website and the homepage is made in MS Paint, you're onto something good" - AJ on the Touhou Project Discord (─‿‿─)</p1>
-
-	<p1>Made by: KAWAII BAAAKA</p1></br></br>
-	<p1>Contact me here (baaakaDev@protonmail.ch) if you have any complaints, suggestions or... want to talk? ¯\_(ツ)_/¯ </p1>
+  Consider getting <a href="https://store.steampowered.com/app/1955830/TouhouHeroofIceFairy/">Touhou Hero of Ice Fairy</a> on Steam.
+  The game is exceptionally well done and <span class="spoiler">Doremy Sweet makes an appearance!</span> </br>
+  </div>
+  
+  <div class="spacer"></div>
+  
+  <div id="randomImageContainer">
+    <img id="randomImage" src="" alt="Random Image">
+  </div>
 
   </div>
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/@erikwatson/snowfall/dist/snowfall.min.js"></script>
+<script src="js/randomImage.js"></script>
+<script src="js/snowfall.min.js"></script>
 <script>
   window.onload = function () {
     snowfall.start({
