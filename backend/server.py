@@ -3,9 +3,9 @@ from flask_cors import CORS
 from utils import save_to_file, ip_to_location
 
 app = Flask(__name__)
-CORS(app, origins="*")
+CORS(app, origins="doremy.ch")
 
-@app.route('/visitor_stop', methods=['GET', 'POST']) 
+@app.route('/visitor_stop', methods=['POST']) 
 def api():
     client_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
     data = request.get_json()
@@ -16,4 +16,4 @@ def api():
     return jsonify({'reply': f'Thanks for letting me know, sleep well'})
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port = 22337)
+    app.run(host='0.0.0.0', port = 22337)
