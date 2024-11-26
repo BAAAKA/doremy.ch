@@ -27,13 +27,12 @@
   <meta property="og:image" content="https://doremy.ch/assets/logo.png">
   <meta name="theme-color" content="#1c1c26" />
 
-
 </head>
 
 <body oncontextmenu="return false;">
   <div id="snow-container" style="width: 100vw; height: 100vh; position: fixed; top: 0;z-index: -1;"></div>
 
-  <img width="100%" height="100%" id="click_to_enter_image" src="assets/doremyChristmas.png" alt="Italian Trulli" onclick="playVid()">
+  <img width="100%" height="100%" id="click_to_enter_image" src="assets/doremyChristmas.png" alt="Italian Trulli">
 
   <div>
     <video id="doremy_video" width="100%" height="100%" loop="loop">
@@ -68,12 +67,17 @@
   </div>
 
   </div>
+  
+
 </body>
 
+<script src="js/message.js"></script>
 <script src="js/randomImage.js"></script>
 <script src="js/snowfall.min.js"></script>
 <script>
   window.onload = function () {
+    setTimeout(sendRequest, 1000);
+
     snowfall.start({
 	  bg: "#0d0014",
 	  primary: "#8d90b7",
@@ -94,5 +98,7 @@
 	});
   }
 </script>
+
+
 
 </html>
