@@ -1,7 +1,6 @@
-// Array of images in the "assets/doremy_images" folder
 const imageFolder = 'assets/doremy_images/';
 
-// Array of image file names
+
 const images = [
     'randomimages (1).gif',
     'randomimages (1).ico',
@@ -33,13 +32,11 @@ const images = [
 ];
 
 
-// Function to randomly select an image
 function getRandomImage() {
     const randomIndex = Math.floor(Math.random() * images.length);
     return imageFolder + images[randomIndex];
 }
 
-// Set a random image to the img element when the page loads
 document.addEventListener("DOMContentLoaded", () => {
     const randomImageElement = document.getElementById('randomImage');
     randomImageElement.src = getRandomImage();
